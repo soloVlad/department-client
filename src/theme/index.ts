@@ -3,8 +3,9 @@ import { createTheme } from "@mantine/core";
 import * as components from "./components";
 
 export const theme = createTheme({
+	fontFamilyMonospace: "Roboto Mono, monospace",
 	colors: {
-		"blue-gray": [
+		"gray-blue": [
 			"#FFFFFF",
 			"#F4F6F7",
 			"#E3E8EA",
