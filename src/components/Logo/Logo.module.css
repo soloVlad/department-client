@@ -1,0 +1,8 @@
+.text {
+  font-family: var(--mantine-font-family-monospace);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 5%;
+  line-height: 20px;
+  color: var(--mantine-color-gray-blue-0);
+}
