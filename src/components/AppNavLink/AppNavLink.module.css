@@ -1,0 +1,10 @@
+.navLink {
+  color: var(--mantine-color-gray-blue-0);
+
+  transition: 0.2s color ease-out;
+
+  @mixin hover {
+    text-decoration: none;
+    color: var(--mantine-color-gray-blue-2);
+  }
+} 
