@@ -11,5 +11,7 @@
 }
 
 .growable {
-  flex: 1;
+  @mixin larger-than $mantine-breakpoint-lg {
+    flex: 1;
+  }
 }

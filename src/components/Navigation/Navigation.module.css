@@ -1,0 +1,6 @@
+.navigation {
+  @mixin smaller-than $mantine-breakpoint-lg {
+    flex: 1;
+    justify-content: center;
+  }
+}

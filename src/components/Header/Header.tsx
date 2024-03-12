@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Container } from "@mantine/core";
+import { Box, Container } from "@mantine/core";
 
 import { Routes } from "@/router";
 
@@ -13,7 +13,7 @@ const Header: FC = () => {
 			<Container className={classes.headerContainer}>
 				<Logo className={classes.growable} href={Routes.HOME} />
 				<Navigation />
-				<div className={classes.growable} />
+				<Box visibleFrom="lg" className={classes.growable} />
 			</Container>
 		</header>
 	);

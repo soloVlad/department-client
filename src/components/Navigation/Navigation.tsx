@@ -5,9 +5,11 @@ import { NavigationItems } from "@/router";
 
 import { AppNavLink } from "@/components";
 
+import classes from "./Navigation.module.css";
+
 const Navigation: FC = () => {
 	return (
-		<Group gap={30}>
+		<Group className={classes.navigation} gap={30}>
 			{NavigationItems.map((navItem) => (
 				<AppNavLink
 					key={navItem.label}
