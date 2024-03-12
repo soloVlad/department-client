@@ -1,9 +1,9 @@
 import type { FC } from "react";
 import { Group } from "@mantine/core";
 
-import { AppNavLink } from "@/components";
+import { NavigationItems } from "@/router";
 
-import { NavigationItems } from "@/router/navigation";
+import { AppNavLink } from "@/components";
 
 const Navigation: FC = () => {
 	return (

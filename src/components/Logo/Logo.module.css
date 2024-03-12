@@ -1,3 +1,7 @@
+.logoContainer {
+  width: fit-content;
+}
+
 .text {
   font-family: var(--mantine-font-family-monospace);
   font-size: 18px;
@@ -5,4 +9,9 @@
   letter-spacing: 5%;
   line-height: 20px;
   color: var(--mantine-color-gray-blue-0);
+}
+
+.clickable {
+  cursor: pointer;
+  user-select: none;
 }
