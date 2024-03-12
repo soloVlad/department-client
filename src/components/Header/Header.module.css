@@ -1,0 +1,15 @@
+.header {
+  padding: 20px;
+  background-color: var(--mantine-color-gray-blue-5);
+  border-radius: 60px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.growable {
+  flex: 1;
+}

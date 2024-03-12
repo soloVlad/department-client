@@ -5,9 +5,13 @@ import { LogoIconUrl } from "@/assets/icons";
 
 import classes from "./Logo.module.css";
 
-const Logo: FC = () => {
+type LogoProps = {
+	className?: string;
+};
+
+const Logo: FC<LogoProps> = ({ className }) => {
 	return (
-		<Group align="center" gap={10}>
+		<Group className={className} align="center" gap={10}>
 			<Image src={LogoIconUrl} />
 
 			<Text className={classes.text} component="strong">
