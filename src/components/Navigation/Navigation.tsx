@@ -9,7 +9,11 @@ const Navigation: FC = () => {
 	return (
 		<Group gap={30}>
 			{NavigationItems.map((navItem) => (
-				<AppNavLink href={navItem.href} label={navItem.label} />
+				<AppNavLink
+					key={navItem.label}
+					href={navItem.href}
+					label={navItem.label}
+				/>
 			))}
 		</Group>
 	);
