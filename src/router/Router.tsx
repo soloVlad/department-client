@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { HomePage } from "@/pages";
 
-import { Routes } from ".";
+import { Routes } from "./routes";
 
 const router = createBrowserRouter([
 	{
