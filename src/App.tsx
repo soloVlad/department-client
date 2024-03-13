@@ -1,4 +1,5 @@
 import "@mantine/core/styles.css";
+import "@/assets/fonts/ProximaNovaCF/ProximaNovaCF.css";
 import "./App.css";
 
 import { MantineProvider } from "@mantine/core";
