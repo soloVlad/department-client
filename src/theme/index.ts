@@ -1,4 +1,4 @@
-import { createTheme } from "@mantine/core";
+import { createTheme, rem } from "@mantine/core";
 
 import * as components from "./components";
 
@@ -17,6 +17,14 @@ export const theme = createTheme({
 			"#44505A",
 			"#1C1C1C",
 		],
+	},
+	headings: {
+		sizes: {
+			h1: { fontSize: rem(48), fontWeight: "700", lineHeight: rem(64.8) },
+			h2: { fontSize: rem(36), fontWeight: "600", lineHeight: rem(43.2) },
+			h3: { fontSize: rem(24), fontWeight: "600", lineHeight: rem(28.8) },
+			h4: { fontSize: rem(18), fontWeight: "400", lineHeight: rem(24.3) },
+		},
 	},
 	components,
 });
