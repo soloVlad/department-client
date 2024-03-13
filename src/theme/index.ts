@@ -19,6 +19,7 @@ export const theme = createTheme({
 			"#1C1C1C",
 		],
 	},
+	black: "#1C1C1C",
 	headings: {
 		sizes: {
 			h1: { fontSize: rem(48), fontWeight: "700", lineHeight: rem(64.8) },
