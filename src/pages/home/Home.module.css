@@ -1,0 +1,10 @@
+.bgContainer {
+  display: flex;
+}
+
+.welcomeContainer {
+  flex: 1;
+  align-self: center;
+
+  color: var(--mantine-color-gray-blue-0);
+}
