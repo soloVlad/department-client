@@ -3,7 +3,7 @@ import { createTheme, rem } from "@mantine/core";
 import * as components from "./components";
 
 export const theme = createTheme({
-	fontFamily: "ProximaNova CF, sans-serif",
+	fontFamily: "Proxima Nova, sans-serif",
 	fontFamilyMonospace: "Roboto Mono, monospace",
 	colors: {
 		"gray-blue": [

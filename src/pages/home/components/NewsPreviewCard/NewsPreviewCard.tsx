@@ -33,10 +33,11 @@ const NewsPreviewCard: FC = () => {
 			</Title>
 
 			<Spoiler
-				maxHeight={65}
+				maxHeight={57}
 				mt={20}
 				mb={0}
 				fz={14}
+				lh={rem(18.9)}
 				showLabel="Развернуть"
 				hideLabel="Свернуть"
 				onClick={(event) => event.stopPropagation()}
