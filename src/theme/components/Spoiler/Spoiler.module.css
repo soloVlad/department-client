@@ -1,0 +1,6 @@
+.control {  
+  font-size: rem(14px);
+  color: var(--mantine-color-gray-blue-5);
+  
+  transform:  translateY(6px);
+}
