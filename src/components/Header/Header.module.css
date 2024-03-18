@@ -1,5 +1,14 @@
 .headerAppContainer {
   padding-top: 20px;
+  width: 100%;
+}
+
+.headerAppContainerHomePage {
+  position: absolute;
+
+  & .header {
+    background-color: transparent;
+  }
 }
 
 .header {
