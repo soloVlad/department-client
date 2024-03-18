@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { BackgroundImage, Container, Text, Title, rem } from "@mantine/core";
 
-import { Header } from "@/components";
+import { Header, SectionContainer } from "@/components";
 
 import { WelcomeBgImageUrl } from "@/assets/images";
 
@@ -31,9 +31,9 @@ const HomePage: FC = () => {
 					</Container>
 				</BackgroundImage>
 
-				<Container>
+				<SectionContainer>
 					<NewsPreview />
-				</Container>
+				</SectionContainer>
 			</main>
 
 			<footer>

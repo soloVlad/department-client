@@ -1,3 +1,7 @@
+.headerAppContainer {
+  padding-top: 20px;
+}
+
 .header {
   padding: 20px;
   background-color: var(--mantine-color-gray-blue-5);
