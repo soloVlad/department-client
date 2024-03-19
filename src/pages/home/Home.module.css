@@ -8,3 +8,11 @@
 
   color: var(--mantine-color-gray-blue-0);
 }
+
+.newsContainer {
+  margin-top: rem(-80px);
+  padding-top: rem(100px);
+  padding-bottom: rem(100px);
+  border-radius: rem(80px);
+  background: var(--mantine-color-gray-blue-0);
+}

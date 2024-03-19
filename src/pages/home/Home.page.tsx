@@ -14,7 +14,7 @@ const HomePage: FC = () => {
 		<>
 			<BackgroundImage
 				className={classes.bgContainer}
-				mih={670}
+				mih={820}
 				src={WelcomeBgImageUrl}
 			>
 				<Container className={classes.welcomeContainer}>
@@ -28,7 +28,7 @@ const HomePage: FC = () => {
 				</Container>
 			</BackgroundImage>
 
-			<SectionContainer>
+			<SectionContainer classNames={{ app: classes.newsContainer }}>
 				<NewsPreview />
 			</SectionContainer>
 		</>
