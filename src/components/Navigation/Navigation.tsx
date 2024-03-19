@@ -15,12 +15,14 @@ type NavigationProps = {
 		navigation?: string;
 		item?: string;
 	};
+	handleItemClick?: () => void;
 };
 
 const Navigation: FC<NavigationProps> = ({
 	inColumn = false,
 	visibleFrom,
 	classNames,
+	handleItemClick,
 }) => {
 	return (
 		<Group
@@ -36,6 +38,7 @@ const Navigation: FC<NavigationProps> = ({
 					key={navItem.label}
 					href={navItem.href}
 					label={navItem.label}
+					handleClick={handleItemClick}
 				/>
 			))}
 		</Group>

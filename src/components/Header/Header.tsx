@@ -15,6 +15,10 @@ const Header: FC = () => {
 
 	const isHomePage = location.pathname === Routes.HOME;
 
+	const closeMenu = () => {
+		setOpened(false);
+	};
+
 	return (
 		<AppContainer
 			className={clsx(classes.headerAppContainer, {
@@ -36,6 +40,7 @@ const Header: FC = () => {
 							<Navigation
 								classNames={{ item: classes.menuItem }}
 								inColumn={true}
+								handleItemClick={closeMenu}
 							/>
 						</Menu.Dropdown>
 					</Menu>

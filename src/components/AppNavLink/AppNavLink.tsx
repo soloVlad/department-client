@@ -11,9 +11,15 @@ type AppNavLinkProps = {
 	classNames?: {
 		navLink?: string;
 	};
+	handleClick?: () => void;
 };
 
-const AppNavLink: FC<AppNavLinkProps> = ({ href, label, classNames }) => {
+const AppNavLink: FC<AppNavLinkProps> = ({
+	href,
+	label,
+	classNames,
+	handleClick,
+}) => {
 	return (
 		<Anchor
 			className={cx(classes.navLink, classNames?.navLink)}
@@ -26,6 +32,7 @@ const AppNavLink: FC<AppNavLinkProps> = ({ href, label, classNames }) => {
 					{...others}
 				/>
 			)}
+			onClick={handleClick}
 		>
 			{label}
 		</Anchor>

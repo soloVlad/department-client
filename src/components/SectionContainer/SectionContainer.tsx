@@ -1,5 +1,6 @@
 import type { FC, PropsWithChildren } from "react";
-import { Container } from "@mantine/core";
+import { Box, Container } from "@mantine/core";
+
 import { AppContainer } from "..";
 
 type SectionContainerProps = PropsWithChildren & {
@@ -15,7 +16,9 @@ const SectionContainer: FC<SectionContainerProps> = ({
 }) => {
 	return (
 		<AppContainer className={classNames?.app}>
-			<Container className={classNames?.section}>{children}</Container>
+			<Box px={20}>
+				<Container className={classNames?.section}>{children}</Container>
+			</Box>
 		</AppContainer>
 	);
 };

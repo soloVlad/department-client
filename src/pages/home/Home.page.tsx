@@ -15,7 +15,7 @@ const HomePage: FC = () => {
 			<BackgroundImage
 				className={classes.bgContainer}
 				mih={820}
-				px={20}
+				px={40}
 				src={WelcomeBgImageUrl}
 			>
 				<Container className={classes.welcomeContainer}>
