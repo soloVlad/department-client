@@ -15,10 +15,11 @@ const HomePage: FC = () => {
 			<BackgroundImage
 				className={classes.bgContainer}
 				mih={820}
+				px={20}
 				src={WelcomeBgImageUrl}
 			>
 				<Container className={classes.welcomeContainer}>
-					<Title order={1} maw={750}>
+					<Title order={1} maw={760}>
 						Веб-технологии и компьютерное моделирование
 					</Title>
 
