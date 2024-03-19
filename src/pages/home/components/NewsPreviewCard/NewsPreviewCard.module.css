@@ -12,3 +12,7 @@
     cursor: pointer;
   }
 }
+
+.spoilerContent {
+  cursor: text;
+}

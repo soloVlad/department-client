@@ -33,6 +33,9 @@ const NewsPreviewCard: FC = () => {
 			</Title>
 
 			<Spoiler
+				classNames={{
+					content: classes.spoilerContent,
+				}}
 				maxHeight={57}
 				mt={20}
 				mb={0}
