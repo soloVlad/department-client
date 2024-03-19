@@ -20,11 +20,20 @@
 .headerContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
 }
 
 .growable {
   @mixin larger-than $mantine-breakpoint-lg {
     flex: 1;
+  }
+}
+
+.menuItem {
+  color: var(--mantine-color-gray-blue-9);
+
+  @mixin hover {
+    color: var(--mantine-color-gray-blue-5);
   }
 }
