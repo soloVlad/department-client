@@ -4,7 +4,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import biomePlugin from "vite-plugin-biome";
 
 export default defineConfig({
-	base: "./",
 	plugins: [
 		react(),
 		tsconfigPaths(),
