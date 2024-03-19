@@ -26,7 +26,7 @@ const AppNavLink: FC<AppNavLinkProps> = ({
 			renderRoot={({ className, ...others }) => (
 				<NavLink
 					className={({ isActive }) =>
-						cx(className, { "active-class": isActive })
+						cx(className, { [classes.active]: isActive })
 					}
 					to={href}
 					{...others}
