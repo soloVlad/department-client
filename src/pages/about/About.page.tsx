@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import { Box, Paper } from "@mantine/core";
+import { Box } from "@mantine/core";
 
-import { SectionContainer } from "@/components";
+import { SectionContainer, TableOfContent } from "@/components";
 
 import {
 	History,
@@ -11,6 +11,13 @@ import {
 } from "./components";
 
 import classes from "./About.module.css";
+
+const content = [
+	{ label: "История", link: "#history", order: 1 },
+	{ label: "Преподавательский состав", link: "#professors", order: 1 },
+	{ label: "Научные направления", link: "#areas", order: 1 },
+	{ label: "Специализации", link: "#specializations", order: 1 },
+];
 
 const AboutPage: FC = () => {
 	return (
@@ -22,9 +29,7 @@ const AboutPage: FC = () => {
 				<Specializations />
 			</Box>
 
-			<Paper mih={200} h="fit-content">
-				bla
-			</Paper>
+			<TableOfContent className={classes.tableOfContent} items={content} />
 		</SectionContainer>
 	);
 };

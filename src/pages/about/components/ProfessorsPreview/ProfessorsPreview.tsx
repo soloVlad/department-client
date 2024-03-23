@@ -16,7 +16,7 @@ const ProfessorsPreview: FC = () => {
 	};
 
 	return (
-		<TitledSection mt={80} title="Преподавательский состав">
+		<TitledSection id="professors" mt={80} title="Преподавательский состав">
 			<Stack gap={30}>
 				<SimpleGrid cols={{ base: 1, xs: 2, md: 3, lg: 4 }} spacing={30}>
 					<ProfessorCard />

@@ -1,0 +1,28 @@
+.link {
+  display: block;
+  padding: rem(8px);
+  padding-right: rem(12px);
+  border-left: rem(4px) solid transparent;
+  
+  font-weight: 400;
+  font-size: rem(18px);
+  line-height: rem(21.6px);
+  text-decoration: none;
+  color: var(--mantine-color-gray-blue-9);
+
+  transition: 0.2s color, 0.1s border;
+
+  @mixin hover {
+    color: var(--mantine-color-gray-blue-5);
+  }
+}
+
+.linkActive {
+  border-left-color: var(--mantine-color-gray-blue-5);
+  
+  color: var(--mantine-color-gray-blue-5);
+}
+
+.wrapper {
+  border-radius: rem(30px);
+}

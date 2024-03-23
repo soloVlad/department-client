@@ -6,4 +6,5 @@ export { default as Navigation } from "./Navigation/Navigation";
 export { default as ProfessorCard } from "./ProfessorCard/ProfessorCard";
 export { default as SectionContainer } from "./SectionContainer/SectionContainer";
 export { default as StarList } from "./StarList/StarList";
+export { default as TableOfContent } from "./TableOfContent/TableOfContent";
 export { default as TitledSection } from "./TitledSection/TitledSection";

@@ -5,7 +5,7 @@ import { TitledSection } from "@/components";
 
 const History: FC = () => {
 	return (
-		<TitledSection title="История">
+		<TitledSection id="history" title="История">
 			<Text fz={18}>
 				Кафедра была создана в сентябре 1973 года при поддержке Ректора
 				БГУ, профессора Сикорского В., академика Крылова В. и декана
