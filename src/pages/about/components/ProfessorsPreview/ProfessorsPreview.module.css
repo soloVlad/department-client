@@ -1,0 +1,6 @@
+.button {
+  width: 100%;
+  max-width: rem(380px);
+
+  align-self: center;
+}
