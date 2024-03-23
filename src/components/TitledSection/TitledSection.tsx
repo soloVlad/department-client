@@ -3,11 +3,18 @@ import type { FC, PropsWithChildren } from "react";
 
 type TitledSectionProps = PropsWithChildren & {
 	title: string;
+	mt?: number;
+	className?: string;
 };
 
-const TitledSection: FC<TitledSectionProps> = ({ title, children }) => {
+const TitledSection: FC<TitledSectionProps> = ({
+	className,
+	title,
+	mt,
+	children,
+}) => {
 	return (
-		<Stack gap={20}>
+		<Stack mt={mt} gap={20} className={className}>
 			<Title order={2}>{title}</Title>
 
 			{children}
