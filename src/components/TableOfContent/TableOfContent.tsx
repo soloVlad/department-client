@@ -1,4 +1,4 @@
-import { useState, type FC } from "react";
+import { useState, type FC, type MouseEvent } from "react";
 import { Box, Paper, Text, rem } from "@mantine/core";
 import clsx from "clsx";
 
@@ -14,22 +14,34 @@ type TableOfContentProps = {
 const TableOfContent: FC<TableOfContentProps> = ({ items, className }) => {
 	const [active, setActive] = useState(0);
 
-	const handleLinkClick = (index: number) => {
-		setActive(index);
+	const handleLinkClick = (
+		event: MouseEvent<HTMLAnchorElement>,
+		activeIndex: number,
+	) => {
+		event.preventDefault();
+		setActive(activeIndex);
+
+		const item = items.find((_, index) => index === activeIndex);
+
+		if (item) {
+			const activeElement = document.getElementById(item.id);
+
+			activeElement?.scrollIntoView();
+		}
 	};
 
 	const list = items.map((item, index) => (
 		<Box<"a">
 			component="a"
 			key={item.label}
-			href={item.link}
+			href={`#${item.id}`}
 			className={clsx(classes.link, {
 				[classes.linkActive]: active === index,
 			})}
 			style={{
 				paddingLeft: `calc(${item.order} * ${rem(26)}`,
 			}}
-			onClick={() => handleLinkClick(index)}
+			onClick={(event) => handleLinkClick(event, index)}
 		>
 			{item.label}
 		</Box>

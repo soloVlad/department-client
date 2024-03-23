@@ -1,5 +1,5 @@
 export type TableOfContentItem = {
 	label: string;
-	link: string;
+	id: string;
 	order: number;
 };

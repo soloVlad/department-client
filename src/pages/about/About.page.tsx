@@ -13,10 +13,10 @@ import {
 import classes from "./About.module.css";
 
 const content = [
-	{ label: "История", link: "#history", order: 1 },
-	{ label: "Преподавательский состав", link: "#professors", order: 1 },
-	{ label: "Научные направления", link: "#areas", order: 1 },
-	{ label: "Специализации", link: "#specializations", order: 1 },
+	{ label: "История", id: "history", order: 1 },
+	{ label: "Преподавательский состав", id: "professors", order: 1 },
+	{ label: "Научные направления", id: "areas", order: 1 },
+	{ label: "Специализации", id: "specializations", order: 1 },
 ];
 
 const AboutPage: FC = () => {
