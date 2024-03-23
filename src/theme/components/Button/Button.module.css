@@ -1,0 +1,21 @@
+.root {
+  height: 100%;
+  padding: rem(18px) rem(30px);
+  border-radius: rem(60px);
+  border: rem(2px) solid var(--mantine-color-gray-blue-5);
+
+  font-size: rem(24px);
+  font-weight: 600;
+  line-height: rem(28.8px);
+  color: var(--mantine-color-gray-blue-5);
+
+  transition: 0.2s background-color;
+
+  @mixin hover {
+    background-color: var(--mantine-color-gray-blue-2);
+  
+    color: var(--mantine-color-gray-blue-5);
+  }
+}
+
+
