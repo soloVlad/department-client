@@ -8,6 +8,8 @@ import { AppContainer, Logo } from "@/components";
 import classes from "./Footer.module.css";
 
 const Footer: FC = () => {
+	const currentYear = new Date().getFullYear();
+
 	return (
 		<AppContainer className={classes.footerAppContainer}>
 			<footer className={classes.footer}>
@@ -15,8 +17,9 @@ const Footer: FC = () => {
 					<Logo href={Routes.HOME} />
 
 					<Text className={classes.copyright}>
-						&copy; 1973 - 2024 Сайт кафердры веб-технологий и компьютерного
-						моделированния ММФ БГУ
+						&copy;
+						{` 1973 - ${currentYear} Сайт кафердры веб-технологий и компьютерного
+						моделированния ММФ БГУ`}
 					</Text>
 				</Container>
 			</footer>
