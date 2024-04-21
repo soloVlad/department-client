@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import { Container } from "@mantine/core";
 import { Outlet } from "react-router-dom";
 
 import { Footer, Header } from "@/components";
