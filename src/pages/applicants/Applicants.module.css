@@ -1,0 +1,13 @@
+.section {
+  margin-top: rem(40px);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: rem(30px);
+}
+
+.tableOfContent {
+  position: sticky;
+  top: rem(40px);
+}
