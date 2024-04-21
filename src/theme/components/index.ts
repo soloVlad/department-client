@@ -1,3 +1,4 @@
+export { default as Accordion } from "./Accordion/Accordion";
 export { default as Button } from "./Button/Button";
 export { default as Container } from "./Container/Container";
 export { default as List } from "./List/List";

@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  padding: 0;
+  border: 1px solid var(--mantine-color-gray-blue-9);
+  border-radius: 15px;
+}
+
+.control {
+  margin: 0;
+  padding: 28px 32px;
+  border-radius: 15px;
+}
+
+.label {
+  margin-right: auto;
+  padding: 0;
+  width: 90%;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.content {
+  padding: 0 32px 28px 32px;
+
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.chevron {
+  width: 36px;
+
+  &[data-rotate] {
+    transform: rotate(45deg);
+  }
+}
