@@ -29,6 +29,10 @@
 .content {
   padding: 0 32px 28px 32px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
   font-size: 18px;
   line-height: 24px;
 }

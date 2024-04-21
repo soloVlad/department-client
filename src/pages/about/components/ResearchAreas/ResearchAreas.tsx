@@ -1,17 +1,21 @@
 import type { FC } from "react";
+import { Accordion } from "@mantine/core";
 
-import { StarList, TitledSection } from "@/components";
+import { TitledSection } from "@/components";
+
+import { RESEARCH_AREAS } from "./ResearchAreas.constants";
 
 const ResearchAreas: FC = () => {
 	return (
 		<TitledSection id="areas" mt={80} title="Научные направления">
-			<StarList
-				items={[
-					"Численные и аналитические методы решения граничных и краевых задач для сеточных, дифференциальных и интегральных уравнений;",
-					"Моделирование сложных систем",
-					"Информационные и Web-технологии",
-				]}
-			/>
+			<Accordion>
+				{RESEARCH_AREAS.map((area) => (
+					<Accordion.Item key={area.value} value={area.value}>
+						<Accordion.Control>{area.value}</Accordion.Control>
+						<Accordion.Panel>{area.description}</Accordion.Panel>
+					</Accordion.Item>
+				))}
+			</Accordion>
 		</TitledSection>
 	);
 };
