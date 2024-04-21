@@ -11,7 +11,7 @@ const StarList: FC<StarListProps> = ({ items }) => {
 	return (
 		<List spacing={24} icon={<Image w={26} src={StarIconUrl} />}>
 			{items.map((item) => (
-				<List.Item>{item}</List.Item>
+				<List.Item key={item}>{item}</List.Item>
 			))}
 		</List>
 	);
