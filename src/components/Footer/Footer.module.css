@@ -1,0 +1,23 @@
+.footerAppContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--mantine-color-gray-blue-5);
+}
+
+.footer {
+  padding: 0 20px;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--mantine-color-gray-blue-3)  
+}

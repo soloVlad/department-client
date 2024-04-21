@@ -2,7 +2,7 @@ import type { FC } from "react";
 import { Container } from "@mantine/core";
 import { Outlet } from "react-router-dom";
 
-import { Header } from "@/components";
+import { Footer, Header } from "@/components";
 
 import classes from "./main.module.css";
 
@@ -15,9 +15,7 @@ const MainLayout: FC = () => {
 				<Outlet />
 			</main>
 
-			<footer>
-				<Container>Footer</Container>
-			</footer>
+			<Footer />
 		</>
 	);
 };
