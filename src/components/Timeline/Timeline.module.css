@@ -1,0 +1,67 @@
+.wrapper {
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.arrow {
+  height: 100%;
+  width: 2px;
+  background-color: var(--mantine-color-gray-blue-5);
+
+  position: absolute;
+  left: 80px;
+
+  &::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 15px 8px;
+    border-color: transparent transparent var(--mantine-color-gray-blue-5)
+      transparent;
+
+    display: block;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -8px;
+  }
+}
+
+.row {
+  gap: 70px;
+
+  &::before {
+    display: block;
+    content: "";
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--mantine-color-gray-blue-5);
+
+    position: absolute;
+    left: 76px;
+  }
+
+  &:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+
+.year {
+  min-width: 50px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 24px;
+}
