@@ -4,7 +4,7 @@ import { StarList, TitledSection } from "@/components";
 
 const Specializations: FC = () => {
 	return (
-		<TitledSection id="specializations" mt={40} title="Специализации">
+		<TitledSection id="specializations" mt={40} mb={92} title="Специализации">
 			<StarList
 				items={[
 					"Web-программирование и Internet-технологии",

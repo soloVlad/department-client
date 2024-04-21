@@ -5,6 +5,7 @@ type TitledSectionProps = PropsWithChildren & {
 	title: string;
 	id?: string;
 	mt?: number;
+	mb?: number;
 	className?: string;
 };
 
@@ -12,11 +13,12 @@ const TitledSection: FC<TitledSectionProps> = ({
 	title,
 	id,
 	mt,
+	mb,
 	className,
 	children,
 }) => {
 	return (
-		<Stack id={id} mt={mt} gap={20} className={className}>
+		<Stack id={id} mt={mt} mb={mb} gap={20} className={className}>
 			<Title order={2}>{title}</Title>
 
 			{children}
