@@ -17,7 +17,7 @@ const ErrorPage: FC = () => {
 
 	return (
 		<Flex h="100vh" justify="center">
-			<Stack mt="30vh" maw={500}>
+			<Stack mt="30vh" px={20} maw={500}>
 				<Title order={2}>Упс</Title>
 				<Text fz={18}>{errorText}</Text>
 			</Stack>
