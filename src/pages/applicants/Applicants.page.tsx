@@ -7,14 +7,16 @@ import {
 	Formation,
 	Magistration,
 	Partners,
+	PassingScoresChart,
 	ShortInfoTable,
 } from "./components";
 
 import classes from "./Applicants.module.css";
 
 const content = [
-	{ label: "Становление специальности", id: "formation", order: 1 },
 	{ label: "Краткая информация о специальности", id: "short-info", order: 1 },
+	{ label: "Становление специальности", id: "formation", order: 1 },
+	{ label: "Проходные баллы", id: "passing-scores", order: 1 },
 	{ label: "Компании-партнёры", id: "partners", order: 1 },
 	{ label: "Магистратура", id: "magistration", order: 1 },
 ];
@@ -25,6 +27,7 @@ const ApplicantsPage: FC = () => {
 			<Box>
 				<ShortInfoTable />
 				<Formation />
+				<PassingScoresChart />
 				<Partners />
 				<Magistration />
 			</Box>
