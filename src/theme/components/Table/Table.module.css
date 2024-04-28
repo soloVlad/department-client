@@ -1,0 +1,28 @@
+.table {
+  border: none;
+
+  font-size: rem(18px);
+  font-weight: 400;
+  line-height: rem(27px);
+
+  & * {
+    border-color: var(--mantine-color-gray-blue-4);
+  }
+}
+
+.th {
+  font-weight: 600;
+}
+
+.td,
+.th {
+  padding: rem(10px) rem(16px);
+
+  &:first-child {
+    padding-left: rem(30px);
+  }
+
+  &:last-child {
+    padding-right: rem(30px);
+  }
+}

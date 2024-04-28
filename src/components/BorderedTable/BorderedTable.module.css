@@ -1,0 +1,5 @@
+.wrapper {
+  border-radius: rem(30px);
+  border-color: var(--mantine-color-gray-blue-4);
+  background-color: var(--mantine-color-gray-blue-0) !important;
+}

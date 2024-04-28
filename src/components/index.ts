@@ -1,5 +1,6 @@
 export { default as AppContainer } from "./AppContainer/AppContainer";
 export { default as AppNavLink } from "./AppNavLink/AppNavLink";
+export { default as BorderedTable } from "./BorderedTable/BorderedTable";
 export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
 export { default as Logo } from "./Logo/Logo";

@@ -3,7 +3,7 @@ import { Box } from "@mantine/core";
 
 import { SectionContainer, TableOfContent } from "@/components";
 
-import { Formation } from "./components";
+import { Formation, ShortInfoTable } from "./components";
 
 import classes from "./Applicants.module.css";
 
@@ -15,6 +15,7 @@ const ApplicantsPage: FC = () => {
 	return (
 		<SectionContainer classNames={{ section: classes.section }}>
 			<Box>
+				<ShortInfoTable />
 				<Formation />
 			</Box>
 
