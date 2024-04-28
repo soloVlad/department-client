@@ -1,0 +1,10 @@
+.section {
+  margin-top: rem(40px);
+
+  padding-bottom: rem(40px);
+}
+
+.text {
+  font-size: rem(18px);
+  line-height: rem(27px);
+}
