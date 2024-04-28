@@ -5,9 +5,19 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: rem(30px);
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tableOfContent {
   position: sticky;
   top: rem(40px);
+
+  @media (max-width: 960px) {
+    position: static;
+    grid-template-columns: 1fr;
+    grid-row-start: 1;
+  }
 }
