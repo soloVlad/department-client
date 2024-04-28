@@ -9,6 +9,7 @@ import classes from "./Applicants.module.css";
 
 const content = [
 	{ label: "Становление специальности", id: "formation", order: 1 },
+	{ label: "Краткая информация о специальности", id: "short-info", order: 1 },
 ];
 
 const ApplicantsPage: FC = () => {
