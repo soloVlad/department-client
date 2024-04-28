@@ -17,7 +17,7 @@ const Timeline: FC<TimelineProps> = ({ items }) => {
 			<Box className={classes.arrow} />
 
 			{items.map((event) => (
-				<Group className={classes.row}>
+				<Group className={classes.row} key={event.description.slice(20)}>
 					<Text className={classes.year}>{event.year}</Text>
 					<Text className={classes.description}>{event.description}</Text>
 				</Group>
