@@ -1,0 +1,23 @@
+.option {
+  padding: 12px 40px;
+  border: 1px solid var(--mantine-color-gray-blue-5);
+  border-radius: 30px;
+
+  font-weight: 600;
+  font-size: rem(14px);
+  line-height: 135%;
+  color: var(--mantine-color-gray-blue-5);
+
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+.activeOption {
+  background-color: var(--mantine-color-gray-blue-4);
+  border-color: var(--mantine-color-gray-blue-4);
+
+  font-size: rem(14px);
+  font-weight: 600;
+  line-height: rem(18px);
+  color: var(--mantine-color-gray-blue-0);
+}

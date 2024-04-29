@@ -1,6 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { AboutPage, Applicants, ErrorPage, HomePage } from "@/pages";
+import {
+	AboutPage,
+	Applicants,
+	ErrorPage,
+	HomePage,
+	ProfessorsPage,
+} from "@/pages";
 
 import { Routes } from "./routes";
 import { MainLayout } from "./layouts";
@@ -23,6 +29,10 @@ const router = createBrowserRouter([
 			{
 				path: Routes.APPLICANTS,
 				element: <Applicants />,
+			},
+			{
+				path: Routes.PROFESSORS,
+				element: <ProfessorsPage />,
 			},
 			{
 				path: Routes.CONTACTS,
