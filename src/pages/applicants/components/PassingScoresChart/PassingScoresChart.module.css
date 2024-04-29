@@ -1,3 +1,36 @@
+.switcher {
+  background-color: var(--mantine-color-gray-blue-2);
+  border-radius: 60px;
+
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+
+  & > .option {
+    width: 50%;
+  }
+}
+
+.option {
+  padding: 15px 30px;
+  border-radius: 60px;
+
+  font-size: rem(18px);
+  font-weight: 600;
+  line-height: rem(22px);
+  text-align: center;
+  color: var(--mantine-color-gray-blue-5);
+
+  cursor: pointer;
+
+  transition: 0.2s background-color;
+}
+
+.activeOption {
+  background: var(--mantine-color-gray-blue-4);
+
+  color: var(--mantine-color-gray-blue-0);
+}
+
 .chartWrapper {
   overflow: auto;
 }
