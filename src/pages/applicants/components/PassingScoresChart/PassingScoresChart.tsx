@@ -1,5 +1,5 @@
 import { useState, type FC } from "react";
-import { Box, Group, Stack, Text } from "@mantine/core";
+import { Box, Center, Group, Stack, Text } from "@mantine/core";
 import ReactECharts from "echarts-for-react";
 import clsx from "clsx";
 
@@ -26,23 +26,23 @@ const PassingScoresChart: FC = () => {
 		<TitledSection id="passing-scores" title="Проходные баллы" mt={80}>
 			<Stack gap={40}>
 				<Group className={classes.switcher}>
-					<Box
+					<Center
 						className={clsx(classes.option, {
 							[classes.activeOption]: specialization === SPECIALIZATION.WEB,
 						})}
 						onClick={() => handleOptionClick(SPECIALIZATION.WEB)}
 					>
 						Веб-программирование и интернет-технологии
-					</Box>
+					</Center>
 
-					<Box
+					<Center
 						className={clsx(classes.option, {
 							[classes.activeOption]: specialization === SPECIALIZATION.MOBILE,
 						})}
 						onClick={() => handleOptionClick(SPECIALIZATION.MOBILE)}
 					>
 						Математическое и программное обеспечение мобильных устройств
-					</Box>
+					</Center>
 				</Group>
 
 				<Box className={classes.chartWrapper}>

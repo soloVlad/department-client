@@ -5,7 +5,6 @@ import { SectionContainer, TableOfContent } from "@/components";
 
 import {
 	Campaign,
-	Formation,
 	Magistration,
 	Partners,
 	PassingScoresChart,
@@ -16,7 +15,6 @@ import classes from "./Applicants.module.css";
 
 const content = [
 	{ label: "Краткая информация о специальности", id: "short-info", order: 1 },
-	{ label: "Становление специальности", id: "formation", order: 1 },
 	{ label: "Проходные баллы", id: "passing-scores", order: 1 },
 	{ label: "Приемная кампания 2024", id: "campaign", order: 1 },
 	{ label: "Компании-партнёры", id: "partners", order: 1 },
@@ -28,7 +26,6 @@ const ApplicantsPage: FC = () => {
 		<SectionContainer classNames={{ section: classes.section }}>
 			<Box>
 				<ShortInfoTable />
-				<Formation />
 				<PassingScoresChart />
 				<Campaign />
 				<Partners />
