@@ -4,6 +4,7 @@ import { Box } from "@mantine/core";
 import { SectionContainer, TableOfContent } from "@/components";
 
 import {
+	Campaign,
 	Formation,
 	Magistration,
 	Partners,
@@ -17,6 +18,7 @@ const content = [
 	{ label: "Краткая информация о специальности", id: "short-info", order: 1 },
 	{ label: "Становление специальности", id: "formation", order: 1 },
 	{ label: "Проходные баллы", id: "passing-scores", order: 1 },
+	{ label: "Приемная кампания 2024", id: "campaign", order: 1 },
 	{ label: "Компании-партнёры", id: "partners", order: 1 },
 	{ label: "Магистратура", id: "magistration", order: 1 },
 ];
@@ -28,6 +30,7 @@ const ApplicantsPage: FC = () => {
 				<ShortInfoTable />
 				<Formation />
 				<PassingScoresChart />
+				<Campaign />
 				<Partners />
 				<Magistration />
 			</Box>

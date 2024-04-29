@@ -3,10 +3,17 @@ import { Paper, Table } from "@mantine/core";
 
 import classes from "./BorderedTable.module.css";
 
-const BorderedTable: FC<PropsWithChildren> = ({ children }) => {
+type BorderedTableProps = PropsWithChildren & {
+	classNames?: {
+		th?: string;
+		td?: string;
+	};
+};
+
+const BorderedTable: FC<BorderedTableProps> = ({ children, classNames }) => {
 	return (
 		<Paper className={classes.wrapper} withBorder>
-			<Table>{children}</Table>
+			<Table classNames={classNames}>{children}</Table>
 		</Paper>
 	);
 };

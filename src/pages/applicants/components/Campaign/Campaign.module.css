@@ -1,0 +1,14 @@
+.td,
+.th {
+  width: 33%;
+
+  text-align: center;
+}
+
+.lastTr {
+  border-bottom: none;
+}
+
+.nameCell {
+  text-align: left;
+}
