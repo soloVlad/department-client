@@ -2,9 +2,13 @@ import { useState, type FC } from "react";
 import { Group, SimpleGrid, Stack } from "@mantine/core";
 
 import type { ProfessorFilterKey } from "@/resources/professor";
-import { ProfessorCard, SectionContainer, TitledSection } from "@/components";
+import {
+	CheckButton,
+	ProfessorCard,
+	SectionContainer,
+	TitledSection,
+} from "@/components";
 
-import { FilterOption } from "./components";
 import { FILTERS } from "./Professors.constants";
 
 import classes from "./Professors.module.css";
@@ -22,7 +26,7 @@ const ProfessorsPage: FC = () => {
 				<Stack gap={35}>
 					<Group gap={10}>
 						{FILTERS.map((filter) => (
-							<FilterOption
+							<CheckButton<ProfessorFilterKey>
 								key={filter.label}
 								label={filter.label}
 								filterKey={filter.filterKey}
