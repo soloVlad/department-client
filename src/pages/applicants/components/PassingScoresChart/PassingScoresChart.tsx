@@ -1,10 +1,12 @@
 import type { FC } from "react";
-import { Stack, Text } from "@mantine/core";
+import { Box, Stack, Text } from "@mantine/core";
 import ReactECharts from "echarts-for-react";
 
 import { TitledSection } from "@/components";
 
 import { CHART_OPTIONS } from "./PassingScoresChart.constants";
+
+import classes from "./PassingScoresChart.module.css";
 
 const PassingScoresChart: FC = () => {
 	return (
@@ -12,7 +14,11 @@ const PassingScoresChart: FC = () => {
 			<Stack gap={40}>
 				<div>switcher</div>
 
-				<ReactECharts option={CHART_OPTIONS} />
+				<Box className={classes.chartWrapper}>
+					<Box className={classes.chartContainer}>
+						<ReactECharts style={{ width: "100%" }} option={CHART_OPTIONS} />
+					</Box>
+				</Box>
 
 				<Text>sdf</Text>
 			</Stack>

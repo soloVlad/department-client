@@ -1,0 +1,8 @@
+.chartWrapper {
+  overflow: auto;
+}
+
+.chartContainer {
+  min-width: rem(560px);
+  width: 100%;
+}
