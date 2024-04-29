@@ -1,0 +1,27 @@
+.wrapper {
+  border: 1px solid var(--mantine-color-gray-blue-6);
+  border-radius: 12px;
+}
+
+.header,
+.subject {
+  padding: 16px 20px;
+
+  justify-content: space-between;
+}
+
+.header {
+  background-color: var(--mantine-color-gray-blue-2);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid var(--mantine-color-gray-blue-6);
+}
+
+.subject {
+  font-size: rem(18px);
+  font-weight: 400;
+  line-height: rem(27px);
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--mantine-color-gray-blue-3);
+  }
+}

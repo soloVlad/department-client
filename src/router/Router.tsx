@@ -6,6 +6,7 @@ import {
 	ErrorPage,
 	HomePage,
 	ProfessorsPage,
+	StudyPage,
 } from "@/pages";
 
 import { Routes } from "./routes";
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
 			{
 				path: Routes.PROFESSORS,
 				element: <ProfessorsPage />,
+			},
+			{
+				path: Routes.STUDY,
+				element: <StudyPage />,
 			},
 			{
 				path: Routes.CONTACTS,

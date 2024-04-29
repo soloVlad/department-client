@@ -1,0 +1,21 @@
+.section {
+  margin-top: rem(40px);
+}
+
+.wrapper {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+
+  & > * {
+    width: 48%;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
