@@ -1,20 +1,14 @@
 import { useState, type FC, useEffect } from "react";
 import { Group, SimpleGrid, Stack } from "@mantine/core";
 
-import { imageUtil, nameUtil } from "@/utils";
-
 import {
 	type Professor,
 	professorApi,
 	type ProfessorFilterKey,
 } from "@/resources/professor";
 
-import {
-	CheckButton,
-	ProfessorCard,
-	SectionContainer,
-	TitledSection,
-} from "@/components";
+import { professorsUI } from "@/ui-helpers";
+import { CheckButton, SectionContainer, TitledSection } from "@/components";
 
 import type { CommonEntity } from "@/types";
 
@@ -78,29 +72,7 @@ const ProfessorsPage: FC = () => {
 						cols={{ base: 1, xs: 3, sm: 4, md: 5, lg: 6 }}
 						spacing={30}
 					>
-						{filteredProfessors.map((professor) => {
-							const { firstName, secondName, middleName, degree, avatar } =
-								professor.attributes;
-
-							const fullName = nameUtil.calcShortFullName(
-								firstName,
-								secondName,
-								middleName,
-							);
-
-							const avatarUrl = imageUtil.getFullImageUrl(
-								avatar.data.attributes.url,
-							);
-
-							return (
-								<ProfessorCard
-									key={professor.id}
-									fullName={fullName}
-									status={degree.data.attributes.name}
-									imageUrl={avatarUrl}
-								/>
-							);
-						})}
+						{professorsUI.createProfessorCards(filteredProfessors)}
 					</SimpleGrid>
 				</Stack>
 			</TitledSection>

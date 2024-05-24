@@ -6,7 +6,7 @@ import type { Professor } from ".";
 export function useProfessors() {
 	const fetchProfessors = () =>
 		api.get<ResponseList<Professor>>(
-			"/professors?populate[0]=avatar&populate[1]=degree",
+			"/professors?populate[0]=avatar&populate[1]=degree&sort=priority:desc",
 		);
 
 	const response = useQuery({

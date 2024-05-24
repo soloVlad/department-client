@@ -8,6 +8,7 @@ export type Professor = {
 	shownInPreview: boolean;
 	isRetired: boolean;
 	degree: DegreeStrapi;
+	priority: number;
 	email?: string;
 	address?: string;
 	number?: number;

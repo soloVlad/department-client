@@ -18,13 +18,7 @@ const ProfessorCard: FC<ProfessorCardProps> = ({
 	return (
 		<Link className={classes.link} to="#">
 			<Stack gap={7} h="100%">
-				<Image
-					className={classes.image}
-					src={imageUrl}
-					w={178}
-					h={230}
-					fit="cover"
-				/>
+				<Image className={classes.image} src={imageUrl} mih={230} fit="cover" />
 
 				<Title order={4}>{fullName}</Title>
 
