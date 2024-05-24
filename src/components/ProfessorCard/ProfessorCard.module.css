@@ -5,4 +5,5 @@
 
 .image {
   border-radius: rem(16px);
+  flex: 1;
 }

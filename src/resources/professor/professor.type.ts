@@ -1,17 +1,24 @@
+import type { ResponseOneWithoutMeta, StrapiImage } from "@/types";
 import type { ProfessorDegree } from "./professor.enums";
 
 export type Professor = {
-	id: string;
 	firstName: string;
 	secondName: string;
-	middleName: string;
-	degree: ProfessorDegree;
+	middleName?: string;
+	shownInPreview: boolean;
 	isRetired: boolean;
+	degree: DegreeStrapi;
 	email?: string;
 	address?: string;
-	phone?: number;
-	shownInPreview: boolean;
+	number?: number;
+	avatar: StrapiImage;
 };
+
+type Degree = {
+	name: string;
+};
+
+export type DegreeStrapi = ResponseOneWithoutMeta<Degree>;
 
 export type ProfessorFilterKey = ProfessorDegree | "retired" | null;
 
