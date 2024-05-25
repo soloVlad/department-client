@@ -18,7 +18,7 @@ const Footer: FC = () => {
 
 					<Text className={classes.copyright}>
 						&copy;
-						{` 1973 - ${currentYear} Сайт кафердры веб-технологий и компьютерного
+						{` 1973 - ${currentYear} Сайт кафедры веб-технологий и компьютерного
 						моделированния ММФ БГУ`}
 					</Text>
 				</Container>
