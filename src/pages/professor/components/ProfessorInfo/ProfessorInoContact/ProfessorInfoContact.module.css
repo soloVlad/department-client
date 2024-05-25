@@ -1,0 +1,7 @@
+.image {
+  flex-shrink: 0;
+}
+
+.link {
+  text-decoration: none;
+}

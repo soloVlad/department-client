@@ -1,6 +1,7 @@
 import api from "@/api";
-import type { ResponseList } from "@/types";
 import { useQuery } from "@tanstack/react-query";
+
+import type { ResponseOne, ResponseList } from "@/types";
 import type { Professor } from ".";
 
 export function useProfessors() {
@@ -23,5 +24,36 @@ export function useProfessors() {
 
 	return {
 		professors: response.data.data.data,
+	};
+}
+
+export function useProfessor(id: string | undefined) {
+	const fetchProfessor = () =>
+		api.get<ResponseOne<Professor>>(
+			`/professors/${id}?populate[0]=avatar&populate[1]=degree`,
+		);
+
+	const response = useQuery({
+		queryKey: ["professor", id],
+		queryFn: fetchProfessor,
+	});
+
+	if (!response?.data) {
+		return {
+			professor: null,
+		};
+	}
+
+	const data = response.data.data.data.attributes;
+
+	return {
+		professor: {
+			imageUrl:
+				import.meta.env.VITE_SERVER_URL + data.avatar.data.attributes.url,
+			degree: data.degree.data.attributes.name,
+			email: data.email,
+			address: data?.address,
+			number: data?.number,
+		},
 	};
 }

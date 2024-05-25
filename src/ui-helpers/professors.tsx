@@ -19,6 +19,7 @@ export const createProfessorCards = (professors: CommonEntity<Professor>[]) => {
 		return (
 			<ProfessorCard
 				key={professor.id}
+				id={professor.id}
 				fullName={fullName}
 				status={degree.data.attributes.name}
 				imageUrl={avatarUrl}

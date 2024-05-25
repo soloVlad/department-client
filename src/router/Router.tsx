@@ -3,16 +3,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
 	AboutPage,
 	Applicants,
+	ContactsPage,
 	DocumentsPage,
 	ErrorPage,
 	HomePage,
+	ProfessorPage,
 	ProfessorsPage,
 	StudyPage,
 } from "@/pages";
 
 import { Routes } from "./routes";
 import { MainLayout } from "./layouts";
-import ContactsPage from "@/pages/contacts/Contacts.page";
 
 const router = createBrowserRouter([
 	{
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 			{
 				path: Routes.PROFESSORS,
 				element: <ProfessorsPage />,
+			},
+			{
+				path: `${Routes.PROFESSORS}/:id`,
+				element: <ProfessorPage />,
 			},
 			{
 				path: Routes.STUDY,

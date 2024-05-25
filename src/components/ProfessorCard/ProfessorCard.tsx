@@ -5,18 +5,20 @@ import { Image, Stack, Text, Title, rem } from "@mantine/core";
 import classes from "./ProfessorCard.module.css";
 
 type ProfessorCardProps = {
+	id: number;
 	imageUrl: string;
 	fullName: string;
 	status: string;
 };
 
 const ProfessorCard: FC<ProfessorCardProps> = ({
+	id,
 	imageUrl,
 	fullName,
 	status,
 }) => {
 	return (
-		<Link className={classes.link} to="#">
+		<Link className={classes.link} to={`/professors/${id}`}>
 			<Stack gap={7} h="100%">
 				<Image className={classes.image} src={imageUrl} mih={230} fit="cover" />
 

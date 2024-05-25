@@ -9,7 +9,7 @@ export type Professor = {
 	isRetired: boolean;
 	degree: DegreeStrapi;
 	priority: number;
-	email?: string;
+	email: string;
 	address?: string;
 	number?: number;
 	avatar: StrapiImage;
