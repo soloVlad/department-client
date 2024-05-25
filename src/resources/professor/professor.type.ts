@@ -1,10 +1,12 @@
-import type { ResponseOneWithoutMeta, StrapiImage } from "@/types";
+import type {
+	ResponseListWithoutMeta,
+	ResponseOneWithoutMeta,
+	StrapiImage,
+} from "@/types";
 import type { ProfessorDegree } from "./professor.enums";
 
 export type Professor = {
-	firstName: string;
-	secondName: string;
-	middleName?: string;
+	fullName: string;
 	shownInPreview: boolean;
 	isRetired: boolean;
 	degree: DegreeStrapi;
@@ -13,6 +15,7 @@ export type Professor = {
 	address?: string;
 	number?: number;
 	avatar: StrapiImage;
+	studentWorks: StudentWorkResponse;
 };
 
 type Degree = {
@@ -20,6 +23,15 @@ type Degree = {
 };
 
 export type DegreeStrapi = ResponseOneWithoutMeta<Degree>;
+
+export type StudentWork = {
+	id: number;
+	topic: string;
+	course: string;
+	studentFullName: string;
+};
+
+export type StudentWorkResponse = ResponseListWithoutMeta<StudentWork>;
 
 export type ProfessorFilterKey = ProfessorDegree | "retired" | null;
 

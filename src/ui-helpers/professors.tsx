@@ -5,14 +5,9 @@ import type { CommonEntity } from "@/types";
 
 export const createProfessorCards = (professors: CommonEntity<Professor>[]) => {
 	return professors.map((professor) => {
-		const { firstName, secondName, middleName, degree, avatar } =
-			professor.attributes;
+		const { fullName, degree, avatar } = professor.attributes;
 
-		const fullName = nameUtil.calcShortFullName(
-			firstName,
-			secondName,
-			middleName,
-		);
+		const shortFullName = nameUtil.calcShortFullName(fullName);
 
 		const avatarUrl = imageUtil.getFullImageUrl(avatar.data.attributes.url);
 
@@ -20,7 +15,7 @@ export const createProfessorCards = (professors: CommonEntity<Professor>[]) => {
 			<ProfessorCard
 				key={professor.id}
 				id={professor.id}
-				fullName={fullName}
+				fullName={shortFullName}
 				status={degree.data.attributes.name}
 				imageUrl={avatarUrl}
 			/>

@@ -1,7 +1,5 @@
-export const calcShortFullName = (
-	firstName: string,
-	secondName: string,
-	middleName?: string,
-) => {
-	return `${secondName} ${firstName[0]}. ${middleName?.[0]}.`;
+export const calcShortFullName = (fullName: string) => {
+	const names = fullName.split(" ");
+
+	return `${names[0]} ${names[1][0]}. ${names?.[2][0]}.`;
 };

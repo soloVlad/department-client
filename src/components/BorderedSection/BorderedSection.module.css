@@ -1,0 +1,11 @@
+.wrapper {
+  border: 1px solid var(--mantine-color-gray-blue-6);
+  border-radius: 12px 12px 12px 12px;
+}
+
+.title {
+  padding: rem(16px) rem(20px);
+  background-color: var(--mantine-color-gray-blue-2);
+  border-radius: 12px 12px 0px 0px;
+  border-bottom: 1px solid var(--mantine-color-gray-blue-6);
+}

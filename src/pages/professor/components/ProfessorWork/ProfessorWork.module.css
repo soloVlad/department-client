@@ -1,0 +1,11 @@
+.wrapper {
+  padding: rem(16px) rem(20px);
+  border-top: 1px solid var(--mantine-color-gray-blue-6);
+
+  align-items: flex-start;
+  gap: rem(40px);
+
+  &:first-of-type {
+    border-top: none;
+  }
+}

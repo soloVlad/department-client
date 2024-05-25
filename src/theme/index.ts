@@ -26,6 +26,8 @@ export const theme = createTheme({
 			h2: { fontSize: rem(36), fontWeight: "600", lineHeight: rem(43.2) },
 			h3: { fontSize: rem(24), fontWeight: "600", lineHeight: rem(28.8) },
 			h4: { fontSize: rem(18), fontWeight: "400", lineHeight: rem(24.3) },
+			h5: { fontSize: rem(18), fontWeight: "600", lineHeight: rem(25.2) },
+			h6: { fontSize: rem(18), fontWeight: "400", lineHeight: rem(27) },
 		},
 	},
 	components,
