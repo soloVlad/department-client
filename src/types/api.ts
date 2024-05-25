@@ -58,3 +58,15 @@ export type StrapiImage = {
 		};
 	};
 };
+
+export type StrapiDoc = {
+	data: {
+		id: number;
+		attributes: {
+			name: string;
+			size: number;
+			url: string;
+			ext: string;
+		};
+	};
+};

@@ -5,6 +5,7 @@ enum Routes {
 	PROFESSORS = "/professors",
 	STUDY = "/study",
 	NEWS = "/news",
+	DOCS = "/docs",
 	CONTACTS = "/contacts",
 }
 

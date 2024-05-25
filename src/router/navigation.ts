@@ -22,7 +22,7 @@ const NavigationItems = [
 		label: "Новости",
 	},
 	{
-		href: "/docs",
+		href: Routes.DOCS,
 		label: "Документы",
 	},
 	{

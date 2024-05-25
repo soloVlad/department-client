@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
 	AboutPage,
 	Applicants,
+	DocumentsPage,
 	ErrorPage,
 	HomePage,
 	ProfessorsPage,
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
 			{
 				path: Routes.STUDY,
 				element: <StudyPage />,
+			},
+			{
+				path: Routes.DOCS,
+				element: <DocumentsPage />,
 			},
 			{
 				path: Routes.CONTACTS,
