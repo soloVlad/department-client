@@ -41,6 +41,7 @@ const ProfessorLessons: FC<ProfessorLessonsProps> = ({ lessons }) => {
 		<BorderedSection title="Где найти">
 			{dayOfWeek && (
 				<Select
+					className={classes.select}
 					data={daysOfWeek}
 					value={dayOfWeek}
 					onChange={setDayOfWeek}

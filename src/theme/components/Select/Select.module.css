@@ -1,0 +1,30 @@
+.wrapper {
+  width: fit-content;
+}
+
+.input {
+  height: fit-content;
+  padding: rem(10px) rem(24px);
+  background-color: var(--mantine-color-gray-blue-1);
+  border: none;
+  border-radius: rem(12px);
+}
+
+.dropdown {
+  padding: 0;
+  border-radius: rem(12px);
+}
+
+.options {
+  padding: 0;
+
+  & > div > div > div > .mantine-ScrollArea-viewport {
+    padding: 0;
+  }
+}
+
+.option {
+  padding: rem(12px) rem(20px);
+  width: 100%;
+  border-radius: rem(12px);
+}
