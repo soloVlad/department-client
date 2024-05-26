@@ -43,24 +43,18 @@ export function useNews() {
 }
 
 export function useNewsPiece(newsPieceId: string | undefined) {
-	if (!newsPieceId) {
-		return {
-			newsPiece: null,
-		};
-	}
-
 	const fetchFetchSubjects = () =>
 		api.get<ResponseOne<NewResponse>>(
 			`/news/${newsPieceId}?populate[0]=coverImage`,
 		);
 
 	const response = useQuery({
-		queryKey: ["news"],
+		queryKey: ["newsPiece"],
 		// @ts-ignore-next-line
 		queryFn: fetchFetchSubjects,
 	});
 
-	if (!response?.data) {
+	if (!response?.data || !newsPieceId) {
 		return {
 			newsPiece: null,
 		};

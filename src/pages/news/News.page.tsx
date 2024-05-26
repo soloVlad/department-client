@@ -13,10 +13,10 @@ const NewsPage: FC = () => {
 
 	return (
 		<SectionContainer classNames={{ section: classes.section }}>
-			<TitledSection title="Новости">
+			<TitledSection title="Новости" mb={80}>
 				<Stack gap={30}>
 					{news.map((newsPiece) => (
-						<NewBox {...newsPiece} />
+						<NewBox key={newsPiece.id} {...newsPiece} />
 					))}
 				</Stack>
 			</TitledSection>

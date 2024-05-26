@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { Link } from "react-router-dom";
-import { Group, Image, Stack, Text, Title } from "@mantine/core";
+import { Group, Stack, Text, Title } from "@mantine/core";
 
 import { dateUtil } from "@/utils";
 
@@ -26,7 +26,9 @@ const NewBox: FC<NewBoxProps> = ({
 	return (
 		<Link className={classes.link} to={`/news/${id}`}>
 			<Stack className={classes.wrapper} gap={10}>
-				<Image className={classes.image} src={coverImageUrl} />
+				{coverImageUrl && (
+					<img className={classes.image} src={coverImageUrl} alt={title} />
+				)}
 
 				<Group>
 					<Text className={classes.category}>{category}</Text>

@@ -4,12 +4,17 @@
 
 .wrapper {
   padding: rem(40px);
+  min-height: rem(220px);
   background-color: var(--mantine-color-gray-blue-1);
   border-radius: 30px;
 }
 
 .image {
   border-radius: 20px;
+  min-height: 220px;
+  object-fit: cover;
+
+  flex-shrink: 0;
 }
 
 .category,

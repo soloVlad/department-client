@@ -16,8 +16,6 @@ const NewsPiecePage: FC = () => {
 
 	const { newsPiece } = newApi.useNewsPiece(id);
 
-	console.log(newsPiece);
-
 	return (
 		<SectionContainer classNames={{ section: classes.section }}>
 			{newsPiece && (
