@@ -6,7 +6,7 @@ import {
 	IconFile,
 } from "@tabler/icons-react";
 
-export const getDocumentIconByExt = (ext: string) => {
+const getDocumentIconByExt = (ext: string) => {
 	switch (ext) {
 		case ".doc":
 			return IconFileTypeDoc;
@@ -19,4 +19,8 @@ export const getDocumentIconByExt = (ext: string) => {
 		default:
 			return IconFile;
 	}
+};
+
+export default {
+	getDocumentIconByExt,
 };

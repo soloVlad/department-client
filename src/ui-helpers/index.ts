@@ -1,2 +1,2 @@
-export * as professorsUI from "./professors";
-export * as documentsUI from "./documents";
+export { default as professorsUI } from "./professors";
+export { default as documentsUI } from "./documents";

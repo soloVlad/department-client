@@ -3,7 +3,7 @@ import type { Professor } from "@/resources/professor";
 import { ProfessorCard } from "@/components";
 import type { CommonEntity } from "@/types";
 
-export const createProfessorCards = (professors: CommonEntity<Professor>[]) => {
+const createProfessorCards = (professors: CommonEntity<Professor>[]) => {
 	return professors.map((professor) => {
 		const { fullName, degree, avatar } = professor.attributes;
 
@@ -21,4 +21,8 @@ export const createProfessorCards = (professors: CommonEntity<Professor>[]) => {
 			/>
 		);
 	});
+};
+
+export default {
+	createProfessorCards,
 };
