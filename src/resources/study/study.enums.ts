@@ -1,8 +1,8 @@
 export enum COURSE {
-	FIRST = "1 курс",
-	SECOND = "2 курс",
-	THIRD = "3 курс",
-	FOURTH = "4 курс",
-	MAG_FIRST = "Магистратура 1 курс",
-	MAG_SECOND = "Магистратура 2 курс",
+	FIRST = "курс 1",
+	SECOND = "курс 2",
+	THIRD = "курс 3",
+	FOURTH = "курс 4",
+	MAG_FIRST = "маг 1 курс",
+	MAG_SECOND = "маг 2 курс",
 }
