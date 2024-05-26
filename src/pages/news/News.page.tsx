@@ -11,8 +11,6 @@ import classes from "./News.module.css";
 const NewsPage: FC = () => {
 	const { news } = newApi.useNews();
 
-	console.log(news);
-
 	return (
 		<SectionContainer classNames={{ section: classes.section }}>
 			<TitledSection title="Новости">

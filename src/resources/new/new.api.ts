@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import api from "@/api";
 
-import type { ResponseList } from "@/types";
+import type { ResponseList, ResponseOne } from "@/types";
 import type { NewResponse, New } from ".";
 
 export function useNews() {
@@ -39,5 +39,48 @@ export function useNews() {
 
 	return {
 		news,
+	};
+}
+
+export function useNewsPiece(newsPieceId: string | undefined) {
+	if (!newsPieceId) {
+		return {
+			newsPiece: null,
+		};
+	}
+
+	const fetchFetchSubjects = () =>
+		api.get<ResponseOne<NewResponse>>(
+			`/news/${newsPieceId}?populate[0]=coverImage`,
+		);
+
+	const response = useQuery({
+		queryKey: ["news"],
+		// @ts-ignore-next-line
+		queryFn: fetchFetchSubjects,
+	});
+
+	if (!response?.data) {
+		return {
+			newsPiece: null,
+		};
+	}
+
+	const { id, attributes } = response.data.data.data;
+
+	const newsPiece = {
+		id,
+		title: attributes.title,
+		shortDescription: attributes.shortDescription,
+		content: attributes.content,
+		category: attributes.category,
+		coverImageUrl:
+			import.meta.env.VITE_SERVER_URL +
+			attributes.coverImage.data.attributes.url,
+		createdAt: attributes.createdAt,
+	} as New;
+
+	return {
+		newsPiece,
 	};
 }
