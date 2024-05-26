@@ -1,0 +1,40 @@
+.link {
+  text-decoration: none;
+}
+
+.wrapper {
+  padding: rem(40px);
+  background-color: var(--mantine-color-gray-blue-1);
+  border-radius: 30px;
+}
+
+.image {
+  border-radius: 20px;
+}
+
+.category,
+.date {
+  font-size: rem(14px);
+  font-weight: 600;
+  line-height: rem(21px);
+  text-transform: uppercase;
+}
+
+.category {
+  color: var(--mantine-color-gray-blue-5);
+}
+
+.date {
+  color: var(--mantine-color-gray-blue-4);
+}
+
+.title {
+  color: var(--mantine-color-gray-blue-9);
+}
+
+.description {
+  font-size: rem(18px);
+  font-weight: 400;
+  line-height: rem(27px);
+  color: var(--mantine-color-gray-blue-9);
+}

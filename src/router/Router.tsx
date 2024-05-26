@@ -7,6 +7,7 @@ import {
 	DocumentsPage,
 	ErrorPage,
 	HomePage,
+	NewsPage,
 	ProfessorPage,
 	ProfessorsPage,
 	StudyPage,
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 			{
 				path: Routes.STUDY,
 				element: <StudyPage />,
+			},
+			{
+				path: Routes.NEWS,
+				element: <NewsPage />,
 			},
 			{
 				path: Routes.DOCS,

@@ -4,6 +4,7 @@ export { default as ContactsPage } from "./contacts/Contacts.page";
 export { default as DocumentsPage } from "./documents/Documents.page";
 export { default as ErrorPage } from "./error/Error.page";
 export { default as HomePage } from "./home/Home.page";
+export { default as NewsPage } from "./news/News.page";
 export { default as ProfessorsPage } from "./professors/Professors.page";
 export { default as ProfessorPage } from "./professor/Professor.page";
 export { default as StudyPage } from "./study/Study.page";
