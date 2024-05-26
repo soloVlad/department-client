@@ -6,7 +6,7 @@ import { professorApi } from "@/resources/professor";
 
 import { SectionContainer } from "@/components";
 
-import { ProfessorInfo, ProfessorWorks } from "./components";
+import { ProfessorInfo, ProfessorLessons, ProfessorWorks } from "./components";
 
 import classes from "./Professor.module.css";
 
@@ -22,7 +22,13 @@ const ProfessorPage: FC = () => {
 					<ProfessorInfo {...professor} />
 
 					<Stack gap={20} flex={1}>
-						<ProfessorWorks studentWorks={professor.studentWorks} />
+						{Boolean(professor.lessons.length) && (
+							<ProfessorLessons lessons={professor.lessons} />
+						)}
+
+						{Boolean(professor.studentWorks.length) && (
+							<ProfessorWorks studentWorks={professor.studentWorks} />
+						)}
 					</Stack>
 				</Group>
 			)}

@@ -16,6 +16,7 @@ export type Professor = {
 	number?: number;
 	avatar: StrapiImage;
 	studentWorks: StudentWorkResponse;
+	lessons: LessonResponse;
 };
 
 type Degree = {
@@ -32,6 +33,16 @@ export type StudentWork = {
 };
 
 export type StudentWorkResponse = ResponseListWithoutMeta<StudentWork>;
+
+export type Lesson = {
+	id: number;
+	startTime: string;
+	endTime: string;
+	classroom: string;
+	dayOfWeek: string;
+};
+
+export type LessonResponse = ResponseListWithoutMeta<Lesson>;
 
 export type ProfessorFilterKey = ProfessorDegree | "retired" | null;
 

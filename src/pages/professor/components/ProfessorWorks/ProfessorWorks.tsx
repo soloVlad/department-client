@@ -13,7 +13,7 @@ const ProfessorWorks: FC<ProfessorWorksProps> = ({ studentWorks }) => {
 	return (
 		<BorderedSection title="Курсовые и дипломные работы">
 			{studentWorks.map((work) => (
-				<ProfessorWork {...work} />
+				<ProfessorWork key={work.id} {...work} />
 			))}
 		</BorderedSection>
 	);

@@ -30,7 +30,7 @@ export function useProfessors() {
 export function useProfessor(id: string | undefined) {
 	const fetchProfessor = () =>
 		api.get<ResponseOne<Professor>>(
-			`/professors/${id}?populate[0]=avatar&populate[1]=degree&populate[2]=studentWorks`,
+			`/professors/${id}?populate[0]=avatar&populate[1]=degree&populate[2]=studentWorks&populate[3]=lessons`,
 		);
 
 	const response = useQuery({
@@ -55,6 +55,14 @@ export function useProfessor(id: string | undefined) {
 		};
 	});
 
+	const lessons = data.lessons.data.map((lesson) => {
+		return {
+			// @ts-ignore-next-line
+			id: lesson.id,
+			...lesson.attributes,
+		};
+	});
+
 	return {
 		professor: {
 			imageUrl:
@@ -64,6 +72,7 @@ export function useProfessor(id: string | undefined) {
 			address: data?.address,
 			number: data?.number,
 			studentWorks,
+			lessons,
 		},
 	};
 }

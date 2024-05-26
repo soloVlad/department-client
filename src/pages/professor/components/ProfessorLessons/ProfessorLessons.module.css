@@ -1,0 +1,19 @@
+.lessonWrapper {
+  padding: rem(8px) rem(20px);
+}
+
+.timeWrapper {
+  width: rem(120px);
+  padding-right: rem(12px);
+  border-right: 2px solid var(--mantine-color-gray-blue-4);
+
+  & p {
+    font-size: rem(18px);
+    color: var(--mantine-color-gray-blue-5);
+  }
+}
+
+.classroom {
+  font-size: rem(18px);
+  font-weight: 500;
+}
