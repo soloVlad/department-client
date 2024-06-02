@@ -53,7 +53,7 @@ export function useDocuments() {
 		return {
 			name,
 			file: {
-				url: import.meta.env.VITE_SERVER_URL + file.data.attributes.url,
+				url: file.data.attributes.url,
 				ext: file.data.attributes.ext,
 			},
 			category: {

@@ -1,4 +1,4 @@
-import { imageUtil, nameUtil } from "@/utils";
+import { nameUtil } from "@/utils";
 import type { Professor } from "@/resources/professor";
 import { ProfessorCard } from "@/components";
 import type { CommonEntity } from "@/types";
@@ -9,7 +9,7 @@ const createProfessorCards = (professors: CommonEntity<Professor>[]) => {
 
 		const shortFullName = nameUtil.calcShortFullName(fullName);
 
-		const avatarUrl = imageUtil.getFullImageUrl(avatar.data.attributes.url);
+		const avatarUrl = avatar.data.attributes.url;
 
 		return (
 			<ProfessorCard

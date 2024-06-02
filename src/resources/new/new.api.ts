@@ -30,9 +30,7 @@ export function useNews() {
 			shortDescription: newsPiece.attributes.shortDescription,
 			content: newsPiece.attributes.content,
 			category: newsPiece.attributes.category,
-			coverImageUrl:
-				import.meta.env.VITE_SERVER_URL +
-				newsPiece.attributes.coverImage.data.attributes.url,
+			coverImageUrl: newsPiece.attributes.coverImage.data.attributes.url,
 			createdAt: newsPiece.attributes.createdAt,
 		} as New;
 	});

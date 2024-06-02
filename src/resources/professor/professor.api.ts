@@ -65,8 +65,7 @@ export function useProfessor(id: string | undefined) {
 
 	return {
 		professor: {
-			imageUrl:
-				import.meta.env.VITE_SERVER_URL + data.avatar.data.attributes.url,
+			imageUrl: data.avatar.data.attributes.url,
 			degree: data.degree.data.attributes.name,
 			email: data.email,
 			address: data?.address,
