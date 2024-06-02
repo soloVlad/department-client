@@ -6,7 +6,12 @@ import { professorApi } from "@/resources/professor";
 
 import { SectionContainer } from "@/components";
 
-import { ProfessorInfo, ProfessorLessons, ProfessorWorks } from "./components";
+import {
+	ProfessorInfo,
+	ProfessorLessons,
+	ProfessorWorkThemes,
+	ProfessorWorks,
+} from "./components";
 
 import classes from "./Professor.module.css";
 
@@ -28,6 +33,10 @@ const ProfessorPage: FC = () => {
 
 						{Boolean(professor.studentWorks.length) && (
 							<ProfessorWorks studentWorks={professor.studentWorks} />
+						)}
+
+						{Boolean(professor.work_themes.length) && (
+							<ProfessorWorkThemes workThemes={professor.work_themes} />
 						)}
 					</Stack>
 				</Group>

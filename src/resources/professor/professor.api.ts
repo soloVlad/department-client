@@ -30,7 +30,7 @@ export function useProfessors() {
 export function useProfessor(id: string | undefined) {
 	const fetchProfessor = () =>
 		api.get<ResponseOne<Professor>>(
-			`/professors/${id}?populate[0]=avatar&populate[1]=degree&populate[2]=studentWorks&populate[3]=lessons`,
+			`/professors/${id}?populate[0]=avatar&populate[1]=degree&populate[2]=studentWorks&populate[3]=lessons&populate[4]=work_themes`,
 		);
 
 	const response = useQuery({
@@ -63,6 +63,13 @@ export function useProfessor(id: string | undefined) {
 		};
 	});
 
+	const work_themes = data.work_themes.data.map((theme) => {
+		return {
+			id: theme.id,
+			name: theme.attributes.name,
+		};
+	});
+
 	return {
 		professor: {
 			imageUrl: data.avatar.data.attributes.url,
@@ -72,6 +79,7 @@ export function useProfessor(id: string | undefined) {
 			number: data?.number,
 			studentWorks,
 			lessons,
+			work_themes,
 		},
 	};
 }
