@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { BackgroundImage, Container, Text, Title, rem } from "@mantine/core";
 
+import { newApi } from "@/resources/new";
 import { SectionContainer } from "@/components";
 
 import { WelcomeBgImageUrl } from "@/assets/images";
@@ -10,6 +11,8 @@ import { NewsPreview } from "./components";
 import classes from "./Home.module.css";
 
 const HomePage: FC = () => {
+	const { news } = newApi.useNews();
+
 	return (
 		<>
 			<BackgroundImage
@@ -30,7 +33,7 @@ const HomePage: FC = () => {
 			</BackgroundImage>
 
 			<SectionContainer classNames={{ app: classes.newsContainer }}>
-				<NewsPreview />
+				<NewsPreview news={news} />
 			</SectionContainer>
 		</>
 	);

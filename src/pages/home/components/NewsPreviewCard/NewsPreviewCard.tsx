@@ -8,28 +8,32 @@ import { Routes } from "@/router";
 
 import classes from "./NewsPreviewCard.module.css";
 
-const newsPreviewInfo = {
-	id: 1,
-	title: "Какой-то интересный заголовок",
-	description:
-		"Здесь идёт какое-то краткое описание повествуемой темы, оно относительно небольшое по задумке.",
-	date: new Date(),
+type NewsPreviewCardProps = {
+	id: number;
+	createdDate: string;
+	title: string;
+	description: string;
 };
 
-const NewsPreviewCard: FC = () => {
+const NewsPreviewCard: FC<NewsPreviewCardProps> = ({
+	id,
+	createdDate,
+	title,
+	description,
+}) => {
 	const navigate = useNavigate();
 
 	const iconSize = 26;
-	const date = dateUtil.formatDateDDMMYYYY(newsPreviewInfo.date);
+	const date = dateUtil.formatDateDDMMYYYY(new Date(createdDate));
 
 	const handleCardClick = () => {
-		navigate(`${Routes.NEWS}/${newsPreviewInfo.id}`);
+		navigate(`${Routes.NEWS}/${id}`);
 	};
 
 	return (
 		<Paper className={classes.card} py={40} px={30} onClick={handleCardClick}>
 			<Title order={3} mih="2lh">
-				{newsPreviewInfo.title}
+				{title}
 			</Title>
 
 			<Spoiler
@@ -45,8 +49,7 @@ const NewsPreviewCard: FC = () => {
 				hideLabel="Свернуть"
 				onClick={(event) => event.stopPropagation()}
 			>
-				{newsPreviewInfo.description}
-				{newsPreviewInfo.description}
+				{description}
 			</Spoiler>
 
 			<Group mt={45} justify="space-between" c="gray-blue.4">
